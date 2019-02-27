@@ -160,36 +160,6 @@ class PlanckApplicationBootstrap
         $mustacheAutoloader->register();
 
 
-
-
-        $this->autoloader->addNamespace('Phi\Traits', $staticVendorPath.'/phi/phi-traits/source/class');
-
-
-
-        $this->autoloader->addNamespace('Phi\Storage', $staticVendorPath.'/phi/phi-storage/source/class');
-
-
-        $this->autoloader->addNamespace('Phi\Event', $staticVendorPath.'/phi/phi-event/source/class');
-
-
-        $this->autoloader->addNamespace('Phi\HTTP', $staticVendorPath.'/phi/phi-http/source/class');
-        $this->autoloader->addNamespace('Phi\Routing', $staticVendorPath.'/phi/phi-routing/source/class');
-        $this->autoloader->addNamespace('Phi\Session', $staticVendorPath.'/phi/phi-session/source/class');
-
-
-        $this->autoloader->addNamespace('Phi\Database', $staticVendorPath.'/phi/phi-database/source/class');
-        $this->autoloader->addNamespace('Phi\Model', $staticVendorPath.'/phi/phi-model/source/class');
-
-
-
-        $this->autoloader->addNamespace('Phi\Cache', $staticVendorPath.'/phi/phi-cache/source/class');
-        $this->autoloader->addNamespace('Phi\Container', $staticVendorPath.'/phi/phi-container/source/class');
-        $this->autoloader->addNamespace('Phi\Application', $staticVendorPath.'/phi/phi-application/source/class');
-        $this->autoloader->addNamespace('Phi\Template', $staticVendorPath.'/phi/phi-template/source/class');
-
-
-        $this->autoloader->addNamespace('Phi\HTML', $staticVendorPath.'/phi/phi-html/source/class');
-        $this->autoloader->addNamespace('Phi\HTML\Extended', $staticVendorPath.'/phi/phi-html-extended/source/class');
 //registering extended HTML elements
         require($staticVendorPath.'/phi/phi-html-extended/source/bootstrap.php');
 
@@ -217,12 +187,14 @@ class PlanckApplicationBootstrap
         $this->autoloader->addNamespace('Planck\Theme\Yummy', $themeFilepath.'/planck-theme-yummy/source/class');
 
         $this->autoloader->addNamespace(\Planck\Extension\Bootstrap::class, $extensionFilepathRoot.'/planck/planck-extension-bootstrap/source/class');
+        $this->autoloader->addNamespace(\Planck\Extension\ViewComponent::class, $extensionFilepathRoot.'/planck/planck-extension-view-component/source/class');
+        $this->autoloader->addNamespace(\Planck\Extension\FormComponent::class, $extensionFilepathRoot.'/planck/planck-extension-form-component/source/class');
         $this->autoloader->addNamespace(\Planck\Extension\Tool::class, $extensionFilepathRoot.'/planck/planck-extension-tool/source/class');
         $this->autoloader->addNamespace(\Planck\Extension\Navigation::class, $extensionFilepathRoot.'/planck/planck-extension-navigation/source/class');
         $this->autoloader->addNamespace(\Planck\Extension\FrontVendor::class, $extensionFilepathRoot.'/planck/planck-extension-front-vendor/source/class');
-        $this->autoloader->addNamespace(\Planck\Extension\ViewComponent::class, $extensionFilepathRoot.'/planck/planck-extension-view-component/source/class');
 
-        $this->autoloader->addNamespace(\Planck\Extension\FormComponent::class, $extensionFilepathRoot.'/planck/planck-extension-form-component/source/class');
+
+
 
 
         $this->autoloader->addNamespace(\Planck\Extension\Model::class, $extensionFilepathRoot.'/planck/planck-extension-model/source/class');

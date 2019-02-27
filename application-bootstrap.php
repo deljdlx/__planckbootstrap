@@ -21,8 +21,8 @@ if(!defined('PLK_APPLICATION_FILEPATH_ROOT'))
 
 
 //=======================================================
-if(is_file(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader.php')) {
-    $autoloader = require(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader.php');
+if(is_file(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader-with-phi.php')) {
+    $autoloader = require(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader-with-phi.php');
 }
 else {
     throw new Exception("Cannot find Phi autoloader automaticaly (Looking for ".__DIR__.'/static-vendor/phi/phi-core/get-autoloader.php)');
