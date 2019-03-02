@@ -48,7 +48,7 @@ class PlanckApplicationBootstrap
             $this->workingPath = $this->applicationPath;
         }
         else {
-            $this->workingPath = $this->normalizePath(realpath(__DIR__.'/..'));
+            $this->workingPath = $this->normalizePath(realpath(__DIR__.'/../../..'));
         }
 
         $this->virtualPathManager = \Phi\Core\VirtualPathManager::getInstance();
@@ -155,6 +155,7 @@ class PlanckApplicationBootstrap
 
         $staticVendorPath = $this->virtualPathManager->getPathByName('vendor');
 
+
         include($staticVendorPath.'/mustache/src/Mustache/Autoloader.php');
         $mustacheAutoloader = new Mustache_Autoloader($staticVendorPath.'/mustache');
         $mustacheAutoloader->register();
@@ -166,6 +167,8 @@ class PlanckApplicationBootstrap
 
 
         $extensionFilepathRoot = $this->virtualPathManager->getPathByName('extension');
+
+
 
         $themeFilepath = $this->virtualPathManager->getPathByName('theme');
         $this->autoloader->addNamespace('Planck\Theme\PlanckBoard', $themeFilepath.'/planck-theme-planck-board/source/class');

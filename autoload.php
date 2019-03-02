@@ -9,7 +9,10 @@ if(!defined('PHI_LIB_PATH')) {
 
 //=======================================================
 if(is_file(PHI_LIB_PATH.'/phi-core/get-autoloader-with-phi.php')) {
+
     $autoloader = require(PHI_LIB_PATH.'/phi-core/get-autoloader-with-phi.php');
+
+
 
 
     $planckPath = realpath(__DIR__.'/..');
