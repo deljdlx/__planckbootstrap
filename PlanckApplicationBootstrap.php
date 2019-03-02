@@ -155,28 +155,13 @@ class PlanckApplicationBootstrap
 
         $staticVendorPath = $this->virtualPathManager->getPathByName('vendor');
 
-        require($staticVendorPath.'/mustache/src/Mustache/Autoloader.php');
+        include($staticVendorPath.'/mustache/src/Mustache/Autoloader.php');
         $mustacheAutoloader = new Mustache_Autoloader($staticVendorPath.'/mustache');
         $mustacheAutoloader->register();
 
 
 //registering extended HTML elements
-        require($staticVendorPath.'/phi/phi-html-extended/source/bootstrap.php');
-
-
-
-        $this->autoloader->addNamespace('Planck', $staticVendorPath.'/planck/planck/source/class');
-        $this->autoloader->addNamespace('Planck\Application', $staticVendorPath.'/planck/planck-application/source/class');
-
-        $this->autoloader->addNamespace('Planck\ApplicationBuilder', $staticVendorPath.'/planck/planck-application-builder/source/class');
-
-
-        $this->autoloader->addNamespace('Planck\Routing', $staticVendorPath.'/planck/planck-routing/source/class');
-        $this->autoloader->addNamespace('Planck\Pattern', $staticVendorPath.'/planck/planck-pattern/source/class');
-        $this->autoloader->addNamespace('Planck\Model', $staticVendorPath.'/planck/planck-model/source/class');
-        $this->autoloader->addNamespace('Planck\View', $staticVendorPath.'/planck/planck-view/source/class');
-        $this->autoloader->addNamespace('Planck\Navigation', $staticVendorPath.'/planck/planck-navigation/source/class');
-
+        include($staticVendorPath.'/phi/phi-html-extended/source/bootstrap.php');
 
 
 
