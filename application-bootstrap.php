@@ -20,19 +20,10 @@ if(!defined('PLK_APPLICATION_FILEPATH_ROOT'))
 }
 
 
+
 require(__DIR__.'/autoload.php');
-
-/*
-//=======================================================
-if(is_file(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader-with-phi.php')) {
-    $autoloader = require(__DIR__.'/../static-vendor/phi/phi-core/get-autoloader-with-phi.php');
-}
-else {
-    throw new Exception("Cannot find Phi autoloader automaticaly (Looking for ".__DIR__.'/static-vendor/phi/phi-core/get-autoloader.php)');
-}
-*/
-
 require(__DIR__.'/PlanckApplicationBootstrap.php');
+
 
 
 $planckApplicationBootstrap = PlanckApplicationBootstrap::getInstance($autoloader, PLK_APPLICATION_FILEPATH_ROOT);
