@@ -51,7 +51,7 @@ class PlanckApplicationBootstrap
             $this->workingPath = $this->normalizePath(realpath(__DIR__.'/../../..'));
         }
 
-        $this->virtualPathManager = \Phi\Core\VirtualPathManager::getInstance();
+        $this->virtualPathManager = \Phi\VirtualFileSystem\Manager::getInstance();
         $this->initializePathManager();
 
 
