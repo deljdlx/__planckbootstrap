@@ -26,7 +26,7 @@ class PlanckApplicationBootstrap
     protected $workingPath;
 
 
-    public static function getInstance(\Phi\Core\Autoloader $autoloader, $applicationPath)
+    public function getInstance(\Phi\Core\Autoloader $autoloader, $applicationPath)
     {
         if(!static::$instance) {
             static::$instance = new static($autoloader, $applicationPath);
