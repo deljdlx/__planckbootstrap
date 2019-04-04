@@ -19,6 +19,7 @@ if(is_file(PHI_LIB_PATH.'/phi-core/load-all-phi.php')) {
 
     $autoloader->addNamespace('Planck', $planckPath.'/planck/source/class');
     $autoloader->addNamespace('Planck\Application', $planckPath.'/planck-application/source/class');
+    $autoloader->addNamespace('Planck\Extension', $planckPath.'/planck-extension/source/class');
     $autoloader->addNamespace('Planck\Model', $planckPath.'/planck-model/source/class');
     $autoloader->addNamespace('Planck\Routing', $planckPath.'/planck-routing/source/class');
 
